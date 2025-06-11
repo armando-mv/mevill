@@ -5,7 +5,8 @@ import { useFormState, useFormStatus } from "react-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
-import { contactFormSchema, submitContactForm, ContactFormState } from "@/app/contact/actions";
+import { type ContactFormState, submitContactForm } from "@/app/contact/actions";
+import { contactFormSchema } from "@/app/contact/schema";
 import type { z } from "zod";
 
 import { Button } from "@/components/ui/button";
