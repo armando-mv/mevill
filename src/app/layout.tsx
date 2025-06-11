@@ -23,14 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable, "font-body")}>
+    <html lang="en" className={cn(inter.variable, "font-body")} suppressHydrationWarning={true}>
       <head>
         {/* Google Fonts are managed by next/font, no need for manual <link> tags if using it properly.
             If specific instructions were to use <link>, they would be here.
             The current setup with next/font is preferred.
         */}
       </head>
-      <body className="font-body antialiased flex flex-col min-h-screen">
+      <body className="font-body antialiased flex flex-col min-h-screen" suppressHydrationWarning={true}>
         <Header />
         <main className="flex-grow">
           {children}
